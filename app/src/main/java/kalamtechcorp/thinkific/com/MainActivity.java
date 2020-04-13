@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         openUrl("https://kalamtechcorp.thinkific.com/cart/add_product/659426?price_id=699367");
     }
 
-    public void demo(View view) {
+    public void demoButton(View view) {
         openUrl("https://kalamtechcorp.thinkific.com/enroll/659426?et=free_trial");
     }
 
