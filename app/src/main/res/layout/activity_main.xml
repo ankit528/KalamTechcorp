@@ -65,9 +65,10 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text"
                 android:layout_marginTop="30dp"
-                android:background="#827717"
+                android:background="@drawable/register_button"
                 android:onClick="register"
                 android:text="@string/register_button_text"
+                android:textAllCaps="false"
                 android:textColor="#FFFFFF"
                 android:textSize="16sp"
                 android:textStyle="bold" />
@@ -79,14 +80,16 @@
                 android:layout_below="@id/register_button"
                 android:layout_marginTop="15dp"
                 android:layout_marginBottom="30dp"
-                android:background="#44FFFFFF"
+                android:background="@drawable/demo_button"
                 android:onClick="demoButton"
                 android:text="@string/demo_button_text"
+                android:textAllCaps="false"
                 android:textColor="#827717"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
         </RelativeLayout>
+
     </RelativeLayout>
 
 </ScrollView>
