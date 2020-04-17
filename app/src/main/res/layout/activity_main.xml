@@ -1,87 +1,95 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
-    <ImageView
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="centerCrop"
-        android:src="@drawable/bg"
-        tools:ignore="ContentDescription" />
+        android:layout_height="wrap_content">
 
-    <ImageView
-        android:id="@+id/company_logo"
-        android:layout_width="120dp"
-        android:layout_height="100dp"
-        android:layout_alignParentTop="true"
-        android:layout_margin="20sp"
-        android:src="@drawable/company_logo"
-        tools:ignore="ContentDescription" />
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/bg"
+            tools:ignore="ContentDescription" />
 
-    <ImageView
-        android:id="@+id/ic_menu"
-        android:layout_width="40dp"
-        android:layout_height="100dp"
-        android:layout_alignParentEnd="true"
-        android:layout_margin="20sp"
-        android:src="@drawable/ic_menu"
-        tools:ignore="ContentDescription" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp">
 
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/company_logo"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginRight="20dp"
-        android:text="@string/vision"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp" />
+            <ImageView
+                android:id="@+id/company_logo"
+                android:layout_width="100dp"
+                android:layout_height="80dp"
+                android:src="@drawable/company_logo"
+                tools:ignore="ContentDescription" />
 
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text1"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:text="@string/certification"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp" />
+            <ImageView
+                android:id="@+id/ic_menu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/ic_menu"
+                tools:ignore="ContentDescription,RtlHardcoded" />
 
-    <Button
-        android:id="@+id/register_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/text"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="30dp"
-        android:layout_marginRight="20dp"
-        android:background="#827717"
-        android:text="@string/register_button_text"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/company_logo"
+                android:layout_marginTop="60dp"
+                android:text="@string/vision"
+                android:textColor="#FFFFFF"
+                android:textSize="28sp" />
 
-    <Button
-        android:id="@+id/demo_button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/register_button"
-        android:layout_centerInParent="true"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
-        android:background="#44FFFFFF"
-        android:text="@string/demo_button_text"
-        android:textColor="#827717"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text1"
+                android:layout_marginTop="10dp"
+                android:text="@string/certification"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp" />
 
-</RelativeLayout>
+            <Button
+                android:id="@+id/register_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/register_button"
+                android:onClick="register"
+                android:text="@string/register_button_text"
+                android:textAllCaps="false"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/demo_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/register_button"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="30dp"
+                android:background="@drawable/demo_button"
+                android:onClick="demoButton"
+                android:text="@string/demo_button_text"
+                android:textAllCaps="false"
+                android:textColor="#827717"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>
